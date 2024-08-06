@@ -23,31 +23,24 @@
                 <input type="password" name="senha" id="senha" >
             </div>
             <div>
-                <label for="ativo">Situação</label>
-                <input type="hidden" name="ativo" id="ativo" value="0">
-                <input type="checkbox" name="ativo" id="ativo" value="1">
+                <label for="endereco">Endereço:</label>
+                <input type="text" name="endereço" id="endereço">
             </div>
             <div>
-                <label for="cidade">Cidade</label>
-                <select name="cidade" id="cidade">
-                    <?php
-                    include('includes/conexao.php');
-                    $sql = "SELECT * FROM cidade";
-                    $result = mysqli_query($con,$sql);
-                    while($row = mysqli_fetch_array($result)){
-                        echo "option value ='".$row['id']."'>".$row['nome']."/".$row['estado']."</opyion";
-                    }
-                    ?>
-                </select>
+                <label for="bairro">Bairro:</label>
+                <input type="text" name="bairro" id="bairro">
+            </div>
+            <div>
+            <label for="Ativo">Ativo:</label>
+            <input type="hidden" name="ativo" id="ativo" label for="Ativo">Sim</label>
+            <input type="checkbox" name="sim" id="sim" value="1" label for="Ativo">Não</label>
+            <input type="checkbox" name="não" id="não" value="2">
             </div>
             <div>
                 <button type="submit">Cadastrar</button>
             </div>
         </fieldset>
     </form>
-
-    <div class="back-button">
-        <a href="index.html">Volte para a página inicial</a>
-    </div>
+    <br><a href="index.html" ><input type="button" value="voltar"></input></a>
 </body>
 </html>
